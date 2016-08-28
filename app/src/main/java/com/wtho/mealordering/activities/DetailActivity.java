@@ -94,9 +94,15 @@ public class DetailActivity extends AppCompatActivity {
                     + mealVo.getDesc());
             tv_meal_price.setText(mealVo.getPrice());
 
-            String ingredientsUrl = MealsConstants.INGREDIENTS_DIR + mealVo.getIngredients()[0];
-            tv_meal_ingredients.setText(ingredientsUrl);
-
+            String ingridents = "";
+            for (int i = 0; i < mealVo.getIngredients().length; i++) {
+                if (i == 0) {
+                    ingridents += mealVo.getIngredients()[i];
+                } else {
+                    ingridents += "\n\n" + mealVo.getIngredients()[i];
+                }
+            }
+            tv_meal_ingredients.setText(ingridents);
             String imageUrl = mealVo.getImage_url();
             Glide.with(iv_meal.getContext())
                     .load(imageUrl)
@@ -119,6 +125,15 @@ public class DetailActivity extends AppCompatActivity {
     private void bindData(MealVo mealVo) {
         tv_meal_desc.setText(mealVo.getDesc() + "\n\n"
                 + mealVo.getDesc());
-    }
 
+        String ingridents = "";
+        for (int i = 0; i < mealVo.getIngredients().length; i++) {
+            if (i == 0) {
+                ingridents += mealVo.getIngredients()[i];
+            } else {
+                ingridents += "\n\n" + mealVo.getIngredients()[i];
+            }
+        }
+        tv_meal_ingredients.setText(ingridents);
+    }
 }

@@ -75,9 +75,7 @@
                 android:padding="@dimen/margin_medium_2"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/text_regular_2x"
-                tools:text="Fried Chicken, Pan Fried Pork Chop, Fried Rice, Orange Juice,Chicken Burger,French Fries.Fried Chicken, Pan Fried Pork Chop,
-Fried Rice, Orange Juice,Chicken Burger,French Fries.Fried Chicken, Pan Fried Pork Chop,
-Fried Rice, Orange Juice,Chicken Burger,French Fries." />
+                tools:text="Fried Chicken." />
 
             <TextView
                 android:id="@+id/tv_meal_ingredient"

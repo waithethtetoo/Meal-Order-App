@@ -20,36 +20,4 @@
         android:layout_marginTop="@dimen/margin_small"
         android:src="@drawable/stock_photo_placeholder" />
 
-    <TextView
-        android:id="@+id/tv_meal_price"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-light"
-        android:text="Price : 5,000"
-        android:textColor="@color/colorPrimary"
-        android:textSize="@dimen/text_regular" />
-
-    <TextView
-        android:id="@+id/tv_meal_desc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_small"
-        android:ellipsize="end"
-        android:fontFamily="sans-serif-light"
-        android:lineSpacingMultiplier="1.2"
-        android:maxLines="4"
-        android:text="Fried Chicken,Fried Chicken,Fried Chicken,Fried Chicken,Fried Chicken,Fried Chicken,Fried Chicken"
-        android:textColor="@color/colorPrimary"
-        android:textSize="@dimen/text_regular" />
-
-    <TextView
-        android:id="@+id/tv_ingredients"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_small"
-        android:fontFamily="sans-serif-light"
-        android:lineSpacingMultiplier="1.2"
-        android:text="Ingredients,Ingredients,Ingredients,Ingredients,Ingredients,Ingredients,"
-        android:textColor="@color/colorPrimary"
-        android:textSize="@dimen/text_regular" />
 </LinearLayout>

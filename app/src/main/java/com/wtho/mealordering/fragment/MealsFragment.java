@@ -16,10 +16,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.wtho.mealordering.MealOrderingApp;
 import com.wtho.mealordering.R;
+import com.wtho.mealordering.activities.DetailActivity;
 import com.wtho.mealordering.adapter.MealAdapter;
 import com.wtho.mealordering.data.model.MealModel;
 import com.wtho.mealordering.data.vo.MealVo;
@@ -84,4 +86,5 @@ public class MealsFragment extends Fragment {
     public void onEvent(DataEvent.MealsDataLoaded event) {
         mealAdapter.setNewData(MealModel.getInstance().getmMealList());
     }
+
 }

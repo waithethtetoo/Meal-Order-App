@@ -22,12 +22,6 @@ public class MealViewHolder extends RecyclerView.ViewHolder implements View.OnCl
 
     //    @BindView(R.id.tv_meal_title)
     TextView tv_meal_title;
-    //    @BindView(R.id.tv_meal_desc)
-    TextView tv_meal_desc;
-    //    @BindView(R.id.tv_meal_price)
-    TextView tv_meal_price;
-    //    @BindView(R.id.tv_ingredients)
-    TextView tv_ingredients;
 
     //    @BindView(R.id.iv_meal)
     ImageView iv_meal;
@@ -40,9 +34,6 @@ public class MealViewHolder extends RecyclerView.ViewHolder implements View.OnCl
 //        ButterKnife.bind(this, itemView);
         itemView.setOnClickListener(this);
         tv_meal_title = (TextView) itemView.findViewById(R.id.tv_meal_title);
-        tv_meal_desc = (TextView) itemView.findViewById(R.id.tv_meal_desc);
-        tv_meal_price = (TextView) itemView.findViewById(R.id.tv_meal_price);
-        tv_ingredients = (TextView) itemView.findViewById(R.id.tv_ingredients);
         iv_meal = (ImageView) itemView.findViewById(R.id.iv_meal);
         mController = item;
     }
@@ -51,11 +42,6 @@ public class MealViewHolder extends RecyclerView.ViewHolder implements View.OnCl
     public void BindData(MealVo meal) {
         mMeal = meal;
         tv_meal_title.setText(meal.getName());
-        tv_meal_desc.setText(meal.getDesc());
-        tv_meal_price.setText(meal.getPrice());
-
-        String ingredientsUrl = MealsConstants.MEALS_BASE_URL + meal.getIngredients()[0];
-        tv_ingredients.setText(ingredientsUrl);
 
         String imageUrl = meal.getImage_url();
         Glide.with(iv_meal.getContext())
@@ -76,10 +62,6 @@ public class MealViewHolder extends RecyclerView.ViewHolder implements View.OnCl
     public void bindData(MealVo item) {
         mMeal = item;
         tv_meal_title.setText(item.getName());
-        tv_meal_desc.setText(item.getDesc());
-        tv_meal_price.setText(item.getPrice());
-        String ingredientsUrl = MealsConstants.MEALS_BASE_URL + item.getIngredients()[0];
-        tv_ingredients.setText(ingredientsUrl);
 
         String imageUrl = item.getImage_url();
         Glide.with(iv_meal.getContext())

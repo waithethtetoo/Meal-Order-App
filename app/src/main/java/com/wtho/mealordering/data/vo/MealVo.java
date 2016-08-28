@@ -18,7 +18,7 @@ public class MealVo {
 
     private int id;
     private String name;
-    private String desc;
+    private String description;
     private String image_url;
     private String price;
     private String[] ingredients;
@@ -32,7 +32,7 @@ public class MealVo {
     }
 
     public String getDesc() {
-        return desc;
+        return description;
     }
 
     public String getImage_url() {
